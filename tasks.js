@@ -112,15 +112,44 @@
 
 // Пример:  invertObject({ a: 1, b: 2, c: 1 }) // { '1': 'c', '2': 'b' }
 
+// function invertObject(obj) {
+// 	let result = {}
+// 	for (let key in obj) {
+// 		let value = obj[key]
+// 		result[value] = key
+// 	}
+// 	console.log(result)
+// }
+// invertObject({ a: 1, b: 2, c: 1 })
+
 // #### 8. Фильтрация объекта по значению
 // Напишите функцию, которая принимает объект и значение, затем возвращает новый объект только с теми свойствами, у которых значение совпадает с переданным.
 
 // Пример:  filterByValue({ a: 1, b: 2, c: 1 }, 1) // { a: 1, c: 1 }
 
+// function filterByValue(obj, value) {
+// 	let result = {}
+// 	for (let key in obj) {
+// 		if (obj[key] === value) {
+// 			result[key] = obj[key]
+// 		}
+// 	}
+// 	console.log(result)
+// }
+// filterByValue({ a: 1, b: 2, c: 1 }, 1)
+
 // #### 9. Объединение объектов с суммированием значений
 // Напишите функцию, которая принимает два объекта с числовыми значениями и возвращает новый объект, объединяющий их. Если ключи совпадают — значения складываются.
-
 // Пример:  mergeAndSum({ a: 1, b: 2 }, { b: 3, c: 4 }) // { a: 1, b: 5, c: 4 }
+
+// function mergeAndSum(obj1, obj2) {
+// 	let clone = Object.assign({}, obj1)
+// 	for (let key in obj2) {
+// 		clone[key] = (clone[key] || 0) + obj2[key]
+// 	}
+// 	console.log(clone)
+// }
+// mergeAndSum({ a: 1, b: 2 }, { b: 3, c: 4 })
 
 // #### 10. Глубокое сравнение объектов
 // Напишите функцию, которая сравнивает два объекта (включая вложенные) и возвращает true, если они идентичны.
